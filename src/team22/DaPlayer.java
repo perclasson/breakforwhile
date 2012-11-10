@@ -14,7 +14,7 @@ public class DaPlayer extends BasePlayer {
 
 	// Name of center player
 	public String getName() {
-		return "Center";
+		return "DaPlayer";
 	}
 
 	// Center player's intelligence

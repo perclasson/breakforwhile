@@ -14,7 +14,7 @@ public class Defender extends Center {
 
 	// Name of defender
 	public String getName() {
-		return "Defender";
+		return "Diego the Defender";
 	}
 
 	// Make left defender left handed, right defender right handed.
@@ -34,7 +34,7 @@ public class Defender extends Center {
 			wehaveit = ! holder.isOpponent();
 		}
 		
-		if(hasPuck() || !wehaveit) {
+		if(hasPuck() || (!wehaveit && getPuck().getX() > 1000)) {
 			setMessage("Ima center!");
 			super.step();
 			return;
