@@ -34,8 +34,9 @@ public class DaPlayer extends BasePlayer {
 			} else {
 				if (getX() < 0) {
 					for (int i = 1; i < 6; i++) {
-						if (getPlayer(i).getX() > 500) {
-							//pass
+						if (getPlayer(i).getX() > 500
+								&& getPlayer(i).getX() < 2400) {
+							// pass
 							shoot(getPlayer(i), 800);
 							break;
 						}
