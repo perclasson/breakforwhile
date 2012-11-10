@@ -84,7 +84,7 @@ public class Goalie extends GoalKeeper {
 							dbgStr += " best " + speed;
 						}
 					}
-					skate(GOAL_POSITION.getX() + 50, (int)dy, speed);
+					skate(GOAL_POSITION.getX() + 60, (int)dy, speed);
 					turn(getPuck(), MAX_TURN_SPEED);
 					return;
 				}
