@@ -1,4 +1,4 @@
-package teamTemplate;
+package team22;
 
 public class Defender extends BasePlayer {
     // Number of defender

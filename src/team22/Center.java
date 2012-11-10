@@ -1,4 +1,4 @@
-package teamTemplate;
+package team22;
 
 public class Center extends BasePlayer {
     // Number of center player

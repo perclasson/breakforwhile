@@ -1,4 +1,4 @@
-package teamTemplate;
+package team22;
 
 public class Forward extends BasePlayer {
     // Number of forward

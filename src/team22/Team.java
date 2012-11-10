@@ -1,4 +1,4 @@
-package teamTemplate;
+package team22;
 
 import java.awt.Color;
 import hockey.api.GoalKeeper;

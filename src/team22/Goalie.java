@@ -1,4 +1,4 @@
-package teamTemplate;
+package team22;
 
 import hockey.api.GoalKeeper;
 import hockey.api.Position;
