@@ -20,3 +20,5 @@ local.properties
 .cproject
 .buildpath
 .DS_Store
+
+hockey/team22/*
