@@ -5,7 +5,7 @@ public class Forward extends BasePlayer {
     public int getNumber() { return 15; }
 
     // Name of forward
-    public String getName() { return "Forward"; }
+    public String getName() { return "Bert"; }
 
     // Intelligence of forward
     public void step() {
