@@ -32,6 +32,11 @@ public class Goalie extends GoalKeeper {
 	// Intelligence of goalie.
 	public void step() {
 		IPuck puck = getPuck();
+		if (hasPuck()) {
+			shoot(getPlayer(1), 200);
+			return;
+		}
+
 		if (puck.getSpeed() > 60 && puck.getX() > -2600) {
 			double angle = puck.getHeading();
 			if (angle < 0) angle += 360;
