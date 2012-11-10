@@ -40,13 +40,13 @@ public class Team implements ITeam {
 	public Player getPlayer(int index) {
 		switch (index) {
 		case 1:
-			return new Center(); // Left defender
+			return new Defender(); // Defender
 		case 2:
-			return new Center(); // Right defender
+			return new Center(); // Forward
 		case 3:
-			return new Center(); // Left forward
+			return new Center(); // Center
 		case 4:
-			return new Center(); // Right forward
+			return new Center(); // Center
 		case 5:
 			return new Center(); // Center
 		}

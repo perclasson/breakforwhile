@@ -1,11 +1,12 @@
 package team22;
 
-import hockey.Util;
+import java.util.Random;
+
 import hockey.api.IPlayer;
 
 public class Center extends BasePlayer {
-	boolean done;
-	
+	Random rand = new Random();
+
 	// Number of center player
 	public int getNumber() {
 		return 19;
@@ -21,20 +22,26 @@ public class Center extends BasePlayer {
 		if (hasPuck()) {
 			int x = getX() - 2600;
 			int y = getY();
-			setMessage("x" + x + " y" + y);
-			
 			int d = 1300;
 			if (x < 0 && (x * x + y * y) <= d * d) {
 				IPlayer goalie = getGoalKeeper(6);
-				int my = goalie.getY() + goalie.getStickY()/2;
-				setMessage("s x" + x + " y" + y);
-				shoot(2600, 95 * (my > 0 ? -1 : 1), 10000);
-				done = true;
-				//skate(getGoalKeeper(0), 1111);
+				int goalie_y = goalie.getY() + goalie.getStickY() / 2;
+
+				int shoot_y = 95 * ((goalie_y > 0) ? -1 : 1);
+				int shoot_x = 2600;
+
+				shoot(shoot_x, shoot_y, 10000);
+			} else {
+				skate(2400, 0, 1000);
 			}
-			else skate(2400, 0, 900);
-		} else if (!done) {
-			skate(getPuck(), 1001);
+		} else {
+			// Our team has the puck but not me
+			if (getPuck().isHeld() && !getPuck().getHolder().isOpponent()) {
+				// Stalk opposites teams players
+				skate(getPlayer(rand.nextInt(11 - 7 + 1) + 7), 1000);
+			} else {
+				skate(getPuck(), 1001);
+			}
 		}
 	}
 }
