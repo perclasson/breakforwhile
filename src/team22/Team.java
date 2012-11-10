@@ -42,13 +42,13 @@ public class Team implements ITeam {
 		case 1:
 			return new Defender(); // Left defender
 		case 2:
-			return new Center(); // Right defender
+			return new DaPlayer(); // Right defender
 		case 3:
-			return new Center(); // Left forward
+			return new DaPlayer(); // Left forward
 		case 4:
-			return new Center(); // Right forward
+			return new DaPlayer(); // Right forward
 		case 5:
-			return new Center(); // Center
+			return new DaPlayer(); // Center
 		}
 		return null;
 	}
