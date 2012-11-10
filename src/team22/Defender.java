@@ -5,7 +5,7 @@ import hockey.api.IPlayer;
 import hockey.api.Position;
 import hockey.model.Player;
 
-public class Defender extends Center {
+public class Defender extends DaPlayer {
 	boolean wehaveit = true;
 	// Number of defender
 	public int getNumber() {
